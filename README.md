@@ -23,10 +23,17 @@ To get started, you need to create an account and get an API key. You can then u
 
 You can start building your app by making requests to our server. Below are links to the documentation for each feature, as well as guides and tutorials to help you get started.
 
-- [Forum API](/products/forum-api.md)
-- [Chat API](/products/chat-api.md)
-- [Commenting API](/products/commenting-api.md)
-- [Components](/products/components.md)
-
+- Documentations
+    - [Forum API](/products/forum-api.md)
+    - [Chat API](/products/chat-api.md)
+    - [Commenting API](/products/commenting-api.md)
+    - [Components](/products/components.md)
+- Guides
+    - [Getting Started](/guides/getting-started.md)
+    - [Building a Forum](/guides/building-a-forum.md)
+    - [Building a Chat](/guides/building-a-chat.md)
+    - [Building a Commenting System](/guides/building-a-commenting-system.md)
+    - [Using Components](/guides/using-components.md)
+    - [List of All Guides](/guides/catalog.md)
 
 
