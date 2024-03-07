@@ -14,29 +14,39 @@ The Forum API from Socify Cloud allows you to create a forum for your users to d
 
 ## Authentication
 
-To use the Forum API, you need to create an account and get an API key. You can then use this API key to make requests to our server. Learn more about getting started [here](https://socify.cloud/guides/authentication.md).
+To use the Forum API, you need to create an account and get an API key. You can then use this API key to make requests to our server. Detailed descriptions on how to perform authentication in API calls can be found [here](https://socify.cloud/guides/authentication.md).
 
 ## Endpoints
 
 All below endpoints are prefixed with `https://api.socify.cloud`. Authentication, as described above, is required for all endpoints.
 
-### `POST /forum/post/{forum-id}`
+### `POST /forum/post`
 
+This endpoint is used to create a new forum post in the forum. After requesting, the server will create the post and return the post information.
 
 ### `GET /forum/post/{forum-id}`
 
+This endpoint is used to get a specific forum post by its ID.
 
 ### `PUT /forum/post/{forum-id}`
 
+This endpoint is used to update a specific forum post by its ID. Whether the user can update a post can be managed by you. The history of the post can be both accessed through the history endpoint, or viewed in Socify's cloud console by you. 
+
+### `GET /forum/post/{forum-id}/history`
+
+This endpoint is used to update a specific forum post by its ID. Whether the user can update a post can be managed by you. The history of the post can be both accessed through the history endpoint, or viewed in Socify's cloud console by you. 
 
 ### `DELETE /forum/post/{forum-id}`
 
+This endpoint is used to delete a specific forum post by its ID. Whether the user can delete a post can be managed by you. The history of the post can be both accessed through the history endpoint, or viewed in Socify's cloud console by you, even after deletion (for the period of time you specify).
 
 ### `POST /forum/post/{forum-id}/reaction`
 
+This endpoint is used to create a reaction to a specific forum post by its ID. Users can react with emojis, upvotes, or downvotes; how they react (the options for reactions) can be managed by you. Adding a reaction to a post would delete the previous reaction of the user.
 
 ### `DELETE /forum/post/{forum-id}/reaction`
 
+This endpoint is used to delete a reaction to a post by its ID. Users can react with emojis, upvotes, or downvotes; how they react (the options for reactions) can be managed by you.
 
 ### `POST /forum/post/{forum-id}/comment`
 
