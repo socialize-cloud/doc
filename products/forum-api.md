@@ -24,6 +24,31 @@ All below endpoints are prefixed with `https://api.socify.cloud`. Authentication
 
 This endpoint is used to create a new forum post in the forum. After requesting, the server will create the post and return the post information.
 
+Request Body:
+
+```json
+{
+    "userId": "user-id",
+    "title": "My First Post",
+    "content": "This is the content of my first post.",
+    "tags": ["tag1", "tag2"]
+}
+```
+
+Response:
+
+```json
+{
+    "id": "post-id",
+    "userId": "user-id",
+    "title": "My First Post",
+    "content": "This is the content of my first post.",
+    "tags": ["tag1", "tag2"],
+    "createdAt": "2021-01-01T00:00:00Z",
+    "updatedAt": "2021-01-01T00:00:00Z"
+}
+```
+
 ### `GET /forum/post/{forum-id}`
 
 This endpoint is used to get a specific forum post by its ID.
