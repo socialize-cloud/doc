@@ -1,6 +1,6 @@
 # Welcome to Socify Cloud
 
-![Socify Cloud Logo](./assets/logo.png)
+![Socify Cloud Logo](/img/branding/logo.png)
 
 You don't want to spend time building social networking features, so we built it for you. Here, you can build an entire forum, chat, and comment sections with just a few lines of code. We provide very simple documentations and guides to get you started. 
 
