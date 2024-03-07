@@ -2,7 +2,7 @@
 
 ![Socify Cloud Logo](./assets/logo.png)
 
-You don't want to spend time building social networking features, so we built it for you. Here, you can build an entire forum, chat, and comment sections with just a few lines of code. We provide extremely simple APIs to get you started. 
+You don't want to spend time building social networking features, so we built it for you. Here, you can build an entire forum, chat, and comment sections with just a few lines of code. We provide very simple documentations and guides to get you started. 
 
 ## Features
 
@@ -37,5 +37,12 @@ You can start building your app by making requests to our server. Below are link
     - [Building a Commenting System](./guides/building-a-commenting-system.md)
     - [Using Components](./guides/using-components.md)
     - [List of All Guides](./guides/catalog.md)
+
+## About Socify
+
+Socify Cloud is built by a team of developers passionate about simplifying the process of building social networking features. We are constantly adding new features and improving our existing ones. If you have any feedback or feature requests, please let us know. For additional information, please visit our website at [socify.cloud](https://socify.cloud).
+
+While using our services, make sure to understand and follow our [Terms of Service](https://socify.cloud/terms) and [Privacy Policy](https://socify.cloud/privacy). If you have any questions, feel free to contact us at [contact@socify.cloud](mailto:contact@socify.cloud)
+
 
 
