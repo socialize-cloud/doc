@@ -26,7 +26,7 @@ All below endpoints are prefixed with `https://api.socify.cloud`. Authentication
 
 ### Creating a Post 
 
-`POST /forum/post`
+Endpoint: `POST /forum/post`
 
 This endpoint is used to create a new forum post in the forum. After requesting, the server will create the post and return the post information.
 
@@ -55,7 +55,9 @@ Example Response:
 }
 ```
 
-### `GET /forum/post/{forum-id}`
+### Getting a Post
+
+Endpoint: `GET /forum/post/{forum-id}`
 
 This endpoint is used to get a specific forum post by its ID.
 
@@ -73,38 +75,58 @@ Example Response:
 }
 ```
 
-### `PUT /forum/post/{forum-id}`
+### Editing a Post
+
+Endpoint: `PUT /forum/post/{forum-id}`
 
 This endpoint is used to update a specific forum post by its ID. Whether the user can update a post can be managed by you. The history of the post can be both accessed through the history endpoint, or viewed in Socify's cloud console by you. 
 
-### `GET /forum/post/{forum-id}/history`
+### Getting Post History
+
+Endpoint: `GET /forum/post/{forum-id}/history`
 
 This endpoint is used to update a specific forum post by its ID. Whether the user can update a post can be managed by you. The history of the post can be both accessed through the history endpoint, or viewed in Socify's cloud console by you. 
 
-### `DELETE /forum/post/{forum-id}`
+### Deleting a Post
+
+Endpoint: `DELETE /forum/post/{forum-id}`
 
 This endpoint is used to delete a specific forum post by its ID. Whether the user can delete a post can be managed by you. The history of the post can be both accessed through the history endpoint, or viewed in Socify's cloud console by you, even after deletion (for the period of time you specify).
 
-### `POST /forum/post/{forum-id}/reaction`
+### Reacting to a Post and Its Comments
 
-This endpoint is used to create a reaction to a specific forum post by its ID. Users can react with emojis, upvotes, or downvotes; how they react (the options for reactions) can be managed by you. Adding a reaction to a post would delete the previous reaction of the user.
+Endpoint: `POST /forum/post/{forum-id}/reaction`
 
-### `DELETE /forum/post/{forum-id}/reaction`
+This endpoint is used to create a reaction to a specific forum post, or its comments, by its ID. Users can react with emojis, upvotes, or downvotes; how they react (the options for reactions) can be managed by you. Adding a reaction to a post would delete the previous reaction of the user.
+
+### Deleting a Reaction
+
+Endpoint: `DELETE /forum/post/{forum-id}/reaction`
 
 This endpoint is used to delete a reaction to a post by its ID. Users can react with emojis, upvotes, or downvotes; how they react (the options for reactions) can be managed by you.
 
-### `POST /forum/post/{forum-id}/comment`
+### Commenting on a Post
+
+Endpoint: `POST /forum/post/{forum-id}/comment`
 
 
-### `PUT /forum/post/{forum-id}/comment`
+### Editing a Comment
+
+Endpoint: `PUT /forum/post/{forum-id}/comment`
 
 
-### `DELETE /forum/post/{forum-id}/comment`
+### Deleting a Comment
+
+Endpoint: `DELETE /forum/post/{forum-id}/comment`
 
 
-### `GET /forum/list`
+### Listing Posts with Criteria
+
+Endpoint: `GET /forum/list`
 
 
-### `GET /forum/search`
+### Searching Posts
+
+Endpoint: `GET /forum/search`
 
 
