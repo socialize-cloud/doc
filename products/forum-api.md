@@ -57,6 +57,20 @@ Example Response:
 
 This endpoint is used to get a specific forum post by its ID.
 
+Example Response:
+
+```json
+{
+    "id": "post-id",
+    "userId": "user-id",
+    "title": "My First Post",
+    "content": "This is the content of my first post.",
+    "tags": ["tag1", "tag2"],
+    "createdAt": "2021-01-01T00:00:00Z",
+    "updatedAt": "2021-01-01T00:00:00Z"
+}
+```
+
 ### `PUT /forum/post/{forum-id}`
 
 This endpoint is used to update a specific forum post by its ID. Whether the user can update a post can be managed by you. The history of the post can be both accessed through the history endpoint, or viewed in Socify's cloud console by you. 
