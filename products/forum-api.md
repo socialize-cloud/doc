@@ -24,7 +24,9 @@ In the API, you will need to provide the `userId` of the user who is creating th
 
 All below endpoints are prefixed with `https://api.socify.cloud`. Authentication, as described above, is required for all endpoints.
 
-### `POST /forum/post`
+### Creating a Post 
+
+`POST /forum/post`
 
 This endpoint is used to create a new forum post in the forum. After requesting, the server will create the post and return the post information.
 
