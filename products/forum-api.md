@@ -130,6 +130,14 @@ Endpoint: `DELETE /forum/post/{forum-id}`
 
 This endpoint is used to delete a specific forum post by its ID. Whether the user can delete a post can be managed by you. The history of the post can be both accessed through the history endpoint, or viewed in Socify's cloud console by you, even after deletion (for the period of time you specify).
 
+Example Response: 
+
+```json
+{
+    "success": true
+}
+```
+
 ### Reacting to a Post and Its Comments
 
 Endpoint: `POST /forum/post/{forum-id}/reaction`
