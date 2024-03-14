@@ -34,10 +34,12 @@ Example Request:
 
 ```json
 {
-    "userId": "user-id",
-    "title": "My First Post",
-    "content": "This is the content of my first post.",
-    "tags": ["tag1", "tag2"]
+    "post": {
+        "userId": "user-id",
+        "title": "My First Post",
+        "content": "This is the content of my first post.",
+        "tags": ["tag1", "tag2"]
+    }
 }
 ```
 
@@ -45,13 +47,15 @@ Example Response:
 
 ```json
 {
-    "id": "post-id",
-    "userId": "user-id",
-    "title": "My First Post",
-    "content": "This is the content of my first post.",
-    "tags": ["tag1", "tag2"],
-    "createdAt": "2021-01-01T00:00:00Z",
-    "updatedAt": "2021-01-01T00:00:00Z"
+    "post": {
+        "id": "post-id",
+        "userId": "user-id",
+        "title": "My First Post",
+        "content": "This is the content of my first post.",
+        "tags": ["tag1", "tag2"],
+        "createdAt": "2021-01-01T00:00:00Z",
+        "updatedAt": "2021-01-01T00:00:00Z"
+    }
 }
 ```
 
@@ -65,13 +69,15 @@ Example Response:
 
 ```json
 {
-    "id": "post-id",
-    "userId": "user-id",
-    "title": "My First Post",
-    "content": "This is the content of my first post.",
-    "tags": ["tag1", "tag2"],
-    "createdAt": "2021-01-01T00:00:00Z",
-    "updatedAt": "2021-01-01T00:00:00Z"
+    "post": {
+        "id": "post-id",
+        "userId": "user-id",
+        "title": "My First Post",
+        "content": "This is the content of my first post.",
+        "tags": ["tag1", "tag2"],
+        "createdAt": "2021-01-01T00:00:00Z",
+        "updatedAt": "2021-01-01T00:00:00Z"
+    }
 }
 ```
 
@@ -80,6 +86,37 @@ Example Response:
 Endpoint: `PUT /forum/post/{forum-id}`
 
 This endpoint is used to update a specific forum post by its ID. Whether the user can update a post can be managed by you. The history of the post can be both accessed through the history endpoint, or viewed in Socify's cloud console by you. 
+
+In the request body, you can provide the fields you want to update. You do not have to provide all fields, and only the provided fields will be updated. Note that, although not recommended, you can also update the `userId` of the post, meaning that the ownsership of the post can be transferred.
+
+Example Request:
+
+```json
+{
+    "post": {
+        "userId": "user-id", 
+        "title": "My Updated Post",
+        "content": "This is the updated content of my first post.",
+        "tags": ["tag1", "tag2", "tag3"]
+    }
+}
+```
+
+Example Response:
+
+```json
+{
+    "post": {
+        "id": "post-id",
+        "userId": "user-id",
+        "title": "My Updated Post",
+        "content": "This is the updated content of my first post.",
+        "tags": ["tag1", "tag2", "tag3"],
+        "createdAt": "2021-01-01T00:00:00Z",
+        "updatedAt": "2021-01-01T00:00:00Z"
+    }
+}
+```
 
 ### Getting Post History
 
