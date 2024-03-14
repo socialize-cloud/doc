@@ -14,11 +14,11 @@ The Forum API from Socify Cloud allows you to create a forum for your users to d
 
 ## Authentication
 
-To use the Forum API, you need to create an account and get an API key. You can then use this API key to make requests to our server. Detailed descriptions on how to perform authentication in API calls can be found [here](../guides/authentication.md).
+To use the Forum API, you need to create an account and get an API key. You can then use this API key to make requests to our server. Detailed descriptions on how to perform authentication in API calls can be found [here](../spec/authentication.md).
 
 ## User ID
 
-In the API, you will need to provide the `userId` of the user who is creating the post, comment, or reaction. This `userId` is the unique identifier of the user in your system. You can learn more about how to manage user IDs in our [guide](../guides/user-id.md).
+In the API, you will need to provide the `userId` of the user who is creating the post, comment, or reaction. This `userId` is the unique identifier of the user in your system. You can learn more about how to manage user IDs in our [guide](../spec/user-id.md).
 
 ## Endpoints
 
