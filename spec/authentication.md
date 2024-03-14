@@ -2,7 +2,7 @@
 
 APIs from Socify Cloud usually require authentication to access. This document describes how to authenticate your API calls.
 
-## API Key (for Server-to-Server Calls)
+## API Key 
 
 To authenticate your API calls, you need to use an API key. You can get an API key for a specific product you are using, or a global access API key. For example, if you are using the Forum API, you can either use an API key for the Forum API or a global API key. 
 
