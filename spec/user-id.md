@@ -4,6 +4,8 @@ In many cases, you will need to provide the `userId` of the user who is performi
 
 ## Examples where `userId` is required
 
+Below are some examples of where you will need to provide the `userId` in the API. However, this ia not an exhaustive list, and you should refer to the documentation of each API endpoint to know whether to provide the `userId`.
+
 - Creating a post in the Forum API
 - Creating a comment in the Forum API
 - Creating a reaction in the Forum API
