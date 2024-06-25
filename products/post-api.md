@@ -1,20 +1,20 @@
-# Socify Cloud Forum API
+# Socify Cloud Post API
 
-The Forum API from Socify Cloud allows you to create a forum for your users to discuss topics. Users can react and comments to other people's posts and comments. This document is the detailed specification of the API usage. Learn more about this product [here](https://socify.cloud/products/forum).
+The Post API from Socify Cloud allows you to create a forum or a posting system for your users to discuss any topic. Users can react and comments to other people's posts and comments. This document is the detailed specification of the API usage. Learn more about this product [here](https://socify.cloud/products/post).
 
 ## Defining Terminoogies
 
 | Term | Definition |
 | ---- | ---------- |
-| Forum | A forum is a place where users can discuss topics. Users can create posts and comments. |
-| Forum Post | A post is an item in the forum a user creates. Other users can react and comment on the post. |
+| Post | A post is an item that holds the content a user creates. Other users can react and comment on the post. |
 | Comment | A comment is a response to a post or another comment. Users can react and reply to comments. |
 | Reaction | A reaction is a response to a post or comment. Users can react with emojis, upvotes, or downvotes; how they react can be managed by you. |
-| Topic Tag | A topic tag is a label associated with each forum post. You can define the structure of the forum by defining categories using tags. |
+| Topic Tag | A topic tag is a label associated with each post. You can define the structure of a forum or filter posts by defining categories using tags. |
+| Series | A series refers to a post's history. When first created, the post will have the same `seriesId` as its `_id`. When edited, the post will have the same `seriesId`, but the `_id` will change. |
 
 ## Authentication
 
-To use the Forum API, you need to create an account and get an API key. You can then use this API key to make requests to our server. Detailed descriptions on how to perform authentication in API calls can be found [here](../spec/authentication.md).
+To use the Post API, you need to create an account and get an API key. You can then use this API key to make requests to our server. Detailed descriptions on how to perform authentication in API calls can be found [here](../spec/authentication.md).
 
 ## User ID
 
@@ -26,9 +26,9 @@ All below endpoints are prefixed with `https://api.socify.cloud`. Authentication
 
 ### Creating a Post 
 
-Endpoint: `POST /forum/post`
+Endpoint: `POST /post`
 
-This endpoint is used to create a new forum post in the forum. After requesting, the server will create the post and return the post information.
+This endpoint is used to create a new post. After requesting, the server will create the post and return the post information.
 
 Example Request:
 
@@ -53,17 +53,16 @@ Example Response:
         "title": "My First Post",
         "content": "This is the content of my first post.",
         "tags": ["tag1", "tag2"],
-        "createdAt": "2021-01-01T00:00:00Z",
-        "updatedAt": "2021-01-01T00:00:00Z"
+        "createdTime": "2021-01-01T00:00:00Z"
     }
 }
 ```
 
 ### Getting a Post
 
-Endpoint: `GET /forum/post/{forum-id}`
+Endpoint: `GET /post/{_id}`
 
-This endpoint is used to get a specific forum post by its ID.
+This endpoint is used to get a specific post by its ID. Note that this endpoint returns the newest version of the post, whose `seriesId` equals the `_id` you provide, while its `_id` might be different. 
 
 Example Response:
 
@@ -75,25 +74,25 @@ Example Response:
         "title": "My First Post",
         "content": "This is the content of my first post.",
         "tags": ["tag1", "tag2"],
-        "createdAt": "2021-01-01T00:00:00Z",
-        "updatedAt": "2021-01-01T00:00:00Z"
+        "createdTime": "2021-01-01T00:00:00Z"
     }
 }
 ```
 
 ### Editing a Post
 
-Endpoint: `PUT /forum/post/{forum-id}`
+Endpoint: `PUT /post`
 
-This endpoint is used to update a specific forum post by its ID. Whether the user can update a post can be managed by you. The history of the post can be both accessed through the history endpoint, or viewed in Socify's cloud console by you. 
+This endpoint is used to update a specific post by its ID. Whether the user can update a post can be managed by you. The history of the post can be both accessed through the history endpoint, or viewed in Socify's cloud console by you. 
 
-In the request body, you can provide the fields you want to update. You do not have to provide all fields, and only the provided fields will be updated. Note that, although not recommended, you can also update the `userId` of the post, meaning that the ownsership of the post can be transferred.
+In the request body, you can provide the fields you want to update. You do not have to provide all fields, and only the provided fields will be updated. Note that, although not recommended, you can also update the `userId` of the post, meaning that the ownsership of the post can be transferred. In addition, the `_id` field is only used to select which post to edit.
 
 Example Request:
 
 ```json
 {
     "post": {
+        "_id" : "post-id",
         "userId": "user-id", 
         "title": "My Updated Post",
         "content": "This is the updated content of my first post.",
@@ -112,8 +111,7 @@ Example Response:
         "title": "My Updated Post",
         "content": "This is the updated content of my first post.",
         "tags": ["tag1", "tag2", "tag3"],
-        "createdAt": "2021-01-01T00:00:00Z",
-        "updatedAt": "2021-01-01T00:00:00Z"
+        "createdTime": "2021-01-01T00:00:00Z",
     }
 }
 ```
