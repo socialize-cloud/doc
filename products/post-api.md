@@ -118,58 +118,58 @@ Example Response:
 
 ### Getting Post History
 
-Endpoint: `GET /forum/post/{forum-id}/history`
+Endpoint: `GET /post/{_id}/history`
 
 This endpoint is used to update a specific forum post by its ID. Whether the user can update a post can be managed by you. The history of the post can be both accessed through the history endpoint, or viewed in Socify's cloud console by you. 
 
 ### Deleting a Post
 
-Endpoint: `DELETE /forum/post/{forum-id}`
+Endpoint: `DELETE /post/{_id}`
 
-This endpoint is used to delete a specific forum post by its ID. Whether the user can delete a post can be managed by you. The history of the post can be both accessed through the history endpoint, or viewed in Socify's cloud console by you, even after deletion (for the period of time you specify).
+This endpoint is used to delete a specific forum post by its ID. Whether the user can delete a post can be managed by you. The history of the post can be both accessed through the history endpoint, or viewed in Socify's cloud console by you, even after deletion, unless you explicitly remove them.
 
 Example Response: 
 
 ```json
 {
-    "success": true
+    "message": "... successfully deleted ..."
 }
 ```
 
 ### Reacting to a Post and Its Comments
 
-Endpoint: `POST /forum/post/{forum-id}/reaction`
+Endpoint: `POST /post/{_id}/reaction`
 
 This endpoint is used to create a reaction to a specific forum post, or its comments, by its ID. Users can react with emojis, upvotes, or downvotes; how they react (the options for reactions) can be managed by you. Adding a reaction to a post would delete the previous reaction of the user.
 
 ### Deleting a Reaction
 
-Endpoint: `DELETE /forum/post/{forum-id}/reaction`
+Endpoint: `DELETE /post/{_id}/reaction`
 
 This endpoint is used to delete a reaction to a post by its ID. Users can react with emojis, upvotes, or downvotes; how they react (the options for reactions) can be managed by you.
 
 ### Commenting on a Post
 
-Endpoint: `POST /forum/post/{forum-id}/comment`
+Endpoint: `POST /post/{_id}/comment`
 
 
 ### Editing a Comment
 
-Endpoint: `PUT /forum/post/{forum-id}/comment`
+Endpoint: `PUT /post/{_id}/comment`
 
 
 ### Deleting a Comment
 
-Endpoint: `DELETE /forum/post/{forum-id}/comment`
+Endpoint: `DELETE /post/{_id}/comment`
 
 
 ### Listing Posts with Criteria
 
-Endpoint: `GET /forum/list`
+Endpoint: `GET /list`
 
 
 ### Searching Posts
 
-Endpoint: `GET /forum/search`
+Endpoint: `GET /search`
 
 
